@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="officials.html">OFFICIALS</a></li>
+      <li><a href="capital.html">STATE CAPITAL</a></li>
+      <li><a href="augusta.html">AUGUSTA</a></li>
+      <li><a href="savannah.html">SAVANNAH</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div style="display: flex; align-items: center;">
+      <div class="intro">
+        <h1>Contact Us</h1>
+        <p>Your questions matter to us, and we strive to provide prompt and accurate responses. Whether you're seeking
+          clarification on a specific policy, need assistance with a government service, or want to learn more about our
+          programs, we're eager to address your concerns.</p>
+        <a href="index.html"><button>HOMEPAGE</button></a>
+      </div>
+      <div style="margin-left: 10%; margin-top: 40px; width: 300px;">
+        <img width="300px" src="mail.png" alt="Mail">
+        <div class="imglabel">Send us an email below!</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <h2>We'd love to hear from you!</h2>
+      <p>We prioritize your privacy and do not share your information with the public. We have strict measures in place
+        to
+        protect your data, including encryption, secure servers, and limited access. Trusted third-party providers also
+        adhere to our privacy standards. We respect your preferences and only use your data within the scope of your
+        consent. Transparency and maintaining your trust are central to our commitment.</p>
+      <br><br>
+      <img src="georgiamap.jpg" width="300px" alt="Georgia Map">
+      <div class="imglabel">Georgia Map</div>
+    </aside>
+
+    <section>
+      <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Enter your first name">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Enter your last name"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+
+        <label for="confirmEmail">Confirm Email:</label>
+        <input type="email" id="confirmEmail" placeholder="Confirm your email address"><br>
+
+        <label for="question">Question:</label>
+        <textarea id="question" placeholder="Ask your question"></textarea><br>
+
+        <input type="checkbox" id="termsCheckbox">
+        <label for="termsCheckbox">By clicking this box, I acknowledge that I have read and understood the terms and
+          conditions.</label>
+        <br>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+
+      <script>
+
+        const emailInput = document.getElementById('email');
+        const confirmEmailInput = document.getElementById('confirmEmail');
+
+        function validateEmail() {
+          if (emailInput.value !== confirmEmailInput.value) {
+            confirmEmailInput.setCustomValidity('Email addresses do not match');
+          } else {
+            confirmEmailInput.setCustomValidity('');
+          }
+        }
+
+        emailInput.addEventListener('input', validateEmail);
+        confirmEmailInput.addEventListener('input', validateEmail);
+      </script>
+    </section>
+  </div>
+
+  <section id="references">
+    <div style="text-align: left;">
+      <p>Copyright &copy; 2023 Pia Walcott</p>
+      <p>Task 2 Submission for D277 - Front-end Web Development</p>
+    </div>
+  </section>
+</body>
+
+</html>
